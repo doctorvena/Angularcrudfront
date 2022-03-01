@@ -1,0 +1,28 @@
+<div *ngIf="editData!=null" _ngcontent-swc-c43="" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade show" aria-modal="true" style="display: block;">
+  <div _ngcontent-swc-c43="" role="document" class="modal-dialog">
+    <div _ngcontent-swc-c43="" class="modal-content">
+      <div _ngcontent-swc-c43="" class="modal-header">
+        <h5 _ngcontent-swc-c43="" id="exampleModalLabel" class="modal-title">Modal title</h5>
+        <button _ngcontent-swc-c43="" type="button" data-dismiss="modal" aria-label="Close" class="close">
+          <span _ngcontent-swc-c43="" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div _ngcontent-swc-c43="" class="modal-body">
+        Brand <br> <input [(ngModel)]="editData.brand"><br>
+        Model<br> <input [(ngModel)]="editData.model"><br>
+        Fuel<br> <input [(ngModel)]="editData.fuel"><br>
+        Color<br> <input [(ngModel)]="editData.color"><br>
+        NumberOfGears<br> <input [(ngModel)]="editData.numberOfGears"><br>
+        <!-- Button trigger modal
+        PowerKw <input [(ngModel)]="editData.powerKw">
+        WheelSize <input [(ngModel)]="editData.wheelSize">
+        -->
+      </div>
+      <div _ngcontent-swc-c43="" class="modal-footer">
+        <button (click)="editData=null" type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+        <button (click)="Snimi()" _ngcontent-swc-c43="" type="button" class="btn btn-primary" >Snimi</button>
+      </div>
+    </div>
+  </div>
+</div>
+

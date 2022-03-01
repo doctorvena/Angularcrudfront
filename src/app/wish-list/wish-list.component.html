@@ -1,0 +1,54 @@
+
+
+<p *ngIf="podaciPrikaz==null">
+  Učitavanje...
+</p>
+
+<div *ngIf="podaciPrikaz!=null">
+
+  Trazi <input [(ngModel)]="trazi"> |
+
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="Pripremi()">
+    Dodaj Auto
+  </button>
+
+  <table class="table table-haver">
+    <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Fuel</th>
+      <th>Color</th>
+      <th>numberOfGears</th>
+      <th>Uredi / Obrisi</th>
+      <!--
+      <th>powerKw</th>
+      <th>wheelSize</th>
+      -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of getPodaci()">
+      <td>{{s.brand}}</td>
+      <td>{{s.model}}</td>
+      <td>{{s.fuel}}</td>
+      <td>{{s.color}}</td>
+      <td>{{s.numberOfGears}}</td>
+      <!--
+      <td>{{s.powerKw}}</td>
+      <td>{{s.wheelSize}}</td>
+      -->
+      <td>
+        <button class="btn btn-primary" (click)="Uredi(s)">Uredi</button>
+        <button class="btn btn-danger" (click)="Obrisi(s)">Obrisi</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-edit [editData]="editData"></app-edit>
+
+
+<app-add [addData]="addData"></app-add>
+
